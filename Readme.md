@@ -10,13 +10,13 @@ sound, scalable design.
 
 ## Setup
 
-Please follow the instructions given in the [environment](https://github.gatech.edu/gios-fall19/environment)
+Please follow the instructions given in the [environment](https://github.gatech.edu/gios-spr-20/environment)
 repository for setting up your development/test environment.
 
 You can clone the code in this repository with the command
 
 ```console
-$ git clone https://github.gatech.edu/gios-fall19/pr1.git
+$ git clone https://github.gatech.edu/gios-spr-20/pr1.git
 ```
 
 ## Submission Instructions
@@ -29,15 +29,14 @@ be downloaded by the teaching assistants and graded according to the assignment
 rubric.
 
 Note: because Georgia Tech now requires two factor authentication you will need
-to obtain a special token for submitting your code.  See [https://bonnie.udacity.com/auth_tokens/two_factor](https://bonnie.udacity.com/auth_tokens/two_factor)
-for information on how to obtain and store this token.  Once you have done so
-you will be able to submit for **all** projects in this course.
+to obtain a special token for submitting your code.  See [https://bonnie.udacity.com/auth_tokens/two_factor](https://bonnie.udacity.com/auth_tokens/two_factor) for information on how to obtain and store this token.  
+Once you have done soyou will be able to submit for **all** projects in this course.
 
 After submitting, you may double-check the results of your submission by
 visiting the [Udacity/GT autograding website](https://bonnie.udacity.com) and
 going to the student portal.
 
-Note: under heavy load, you may get a timeout error from Bonnie.  The results
+> Note: under heavy load, you may get a timeout error from Bonnie.  The results
 on the web page will show you the estimated completion time.  When the test
 run is completed, your results will be updated.
 
@@ -428,8 +427,8 @@ This file can be either a markdown file (readme-student.md) or a PDF (readme-stu
 The submit script will submit either (or both) but it raises an error if neither exists.
 
 To obtain all possible points, we want you to demonstrate your understanding of what you
-have done.  We are not looking for a diary, we are looking for a clear explanation of
-what you did and why you did it.  This is your graders opportunity to award you points
+have done.  **We are not looking for a diary, we are looking for a clear explanation of
+what you did and why you did it.**  This is your grader's opportunity to award you points
 for _understanding_ the project, even if you struggle with the implementation, as
 these are manually graded.
 
