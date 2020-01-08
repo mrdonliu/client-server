@@ -19,18 +19,6 @@ You can clone the code in this repository with the command
 $ git clone https://github.gatech.edu/gios-fall19/pr1.git
 ```
 
-We **strongly** recommend that you disable pushes to the class repository: if you do
-so, your changes will become visible to everyone in the class.  If you then try to
-*clean it up* you will make it impossible for us to do so.  To prevent this, please
-type the following **from the pr1 directory** after you have cloned the repository:
-
-```console
-$ git remote set-url --push origin DO_NOT_PUSH
-```
-
-This will protect you from being able to push to the class repository.  Note that we no longer
-allow forks, to prevent erroneous pull requests (which are visible to everyone).
-
 ## Submission Instructions
 
 All code should be submitted using the submit.py script given at the top
@@ -61,11 +49,10 @@ are now more jobs to process,) not faster.
 Throughout the project, we encourage you to keep notes on what you have done,
 how you have approached each part of the project and what resources you used in
 preparing your work.  We have provided you with a prototype file,
-**readme-student.md** that you may use as the basis for this report.
+**readme-student-template.md** that you may use as the basis for this report.
 
-If you prefer, you may generate a **pdf** version of your report and submit it
-under the name **readme-student.pdf**.  You may submit either (or both) of
-your reports with the command:
+To submit your README, you must either create a file called **readme-student.md** 
+or **readme-student.pdf**.  You may submit either one (but not both) with the command:
 
 ```console
 $ python submit.py readme
@@ -73,7 +60,7 @@ $ python submit.py readme
 
 The Udacity site will store your submission in a database. This will be used
 during grading.  The submit script will acknowledge receipt of your README
-file.
+file.  You may confirm the contents at the [Bonnie Portal](https://bonnie.udacity.com).
 
 * For this assignment, you may submit your code up to 10 times per day.  After
   the deadline,  we download your last submission prior to the
