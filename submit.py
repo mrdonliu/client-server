@@ -71,11 +71,21 @@ def compute_readme_list():
     for candidate in readme_candidates:
         if os.path.isfile(candidate):
             readme_list.append(candidate)
-    if len(readme_list) < 2:
-        raise Exception("There is no valid student readme file to submit")
-    if len(readme_list) > 2:
-        raise Exception("You need to submit EITHER the Markdown OR the PDF version, but not both")
     return readme_list
+
+def validate_readme_list(readme_list):
+    found_md = False
+    found_pdf = False
+    for file in readme_list:
+        if 'readme-student.md' == file:
+            found_md = True
+        if 'readme-student.pdf' == file:
+            found_pdf = True 
+    if not found_md and not found_pdf:
+        raise Exception("There is no valid student readme file to submit")
+    if found_md and found_pdf:
+        raise Exception("You need to submit EITHER the Markdown OR the PDF version, but not both")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Submits code to the Udacity site.')
@@ -106,6 +116,11 @@ def main():
                  'pr1_gfclient_mt': ['gfclient_download.c', 'gfclient-student.h', 'gf-student.h'],
                  'pr1_gfserver_mt': ['gfserver_main.c', 'handler.c', 'gfserver-student.h', 'gf-student.h'],
                  'pr1_readme': compute_readme_list()}
+
+    if args.quiz == 'readme':
+        validate_readme_list(files_map[quiz_map[args.quiz]])
+    else:
+        print(args.quiz)
 
     quiz = quiz_map[args.quiz]
 

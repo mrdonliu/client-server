@@ -424,7 +424,7 @@ for your development.  We encourage you to submit your readme file as your proje
 develops, so that it can serve as a log of your work.
 
 This file can be either a markdown file (readme-student.md) or a PDF (readme-student.pdf).
-The submit script will submit either (or both) but it raises an error if neither exists.
+The submit script will submit one but it raises an error if neither or both exist.
 
 To obtain all possible points, we want you to demonstrate your understanding of what you
 have done.  **We are not looking for a diary, we are looking for a clear explanation of
@@ -520,6 +520,26 @@ automatically, but graders may execute additional tests of these requirements.
     how you would change things, sample code, code for tests, etc.) We do not
     give extra credit for simply _reporting_ an issue - we're looking for
     actionable suggestions on how to improve things.
+
+**Partial Credit** - we award "partial credit" via the readme-student.{md,pdf}
+file that you may submit.  Thus, if you are not able to get a test working,
+but can explain what it should be doing so the reader is convinced you
+understand the project, we will award you points that way.
+
+In cases where we identify an issue with the grader that impacts your project,
+we may manually adjust the final scores.  For example, if we find that your
+code fails to implement required functionality but the grader failed to
+detect this, we may reduce the score.  Similarly, if we find an issue with the
+grader that failed to credit you properly, we may adjust the score manually.
+Normally this is done by running a modified version of the grader that is
+corrected.  **This is unusual, but has happened in the past.**. 
+
+**Ideal README** - the ideal README file is one that you could have picked up
+at the start of the project and used it to guide your development.  It would
+explain the choices you considered and _why_ you chose specific approaches
+to the problem.  It won't complain about the code, the process, how little you
+know about C, or other things unrelated to the project.  It won't discuss the
+_code_; it will discuss the techniques and algorithms.
 
 ## Questions
 
