@@ -82,5 +82,51 @@ int main(int argc, char **argv)
     }
 
     /* Socket Code Here */
+    int sock_fd = socket(AF_INET , SOCK_STREAM, 0);
+    if( sock_fd < 0 ){
+        perror("Error occur when creating a socket");
+        exit(1);
+    }
+    struct hostent* server;
+    server = gethostbyname(hostname);
+    char buffer[16];
+    if( server == NULL ){
+        perror("gethostbyname is not returning proper host entry.");
+        exit(1);
+    }
+    struct sockaddr_in serv_addr;
+    bzero((char*) &serv_addr, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_port = htons(portno);
+    bcopy((char*)server->h_addr, (char*)&serv_addr.sin_addr.s_addr, server->h_length);
+
+    if (connect(sock_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
+      perror("Error connecting");
+      exit(1);
+   }
+   memset(buffer , 0 , sizeof(buffer));
+   strcpy((char*) buffer , message);
+
+   int n = write(sock_fd, buffer, strlen(buffer));
+   
+   if (n < 0) {
+      perror("ERROR writing to socket");
+      exit(1);
+   }
+
+   bzero(buffer,sizeof(buffer));
+   n = read(sock_fd, buffer, sizeof(buffer));
+   printf("%s" , buffer);
+   
+   if (n < 0) {
+      perror("ERROR reading from socket");
+      exit(1);
+   }
+   return 0;
+
+
+
+
+
 
 }
